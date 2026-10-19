@@ -206,9 +206,14 @@ export function CommentCard({
         disabled={busy}
         placeholder="Add a comment"
         // 16px on phones keeps iOS from zooming in when the field is focused.
+        // Our padding outranks the room bb reserves for its voice controls, so
+        // keep the microphone clear here: on the right while idle, and a row
+        // below the text while the recording controls span the field.
         className={cn(
-          "block w-full resize-none bg-transparent px-3 text-foreground outline-none placeholder:text-muted-foreground",
-          sheet ? "py-3 text-base leading-6" : "py-2.5 text-sm leading-5",
+          "block w-full resize-none bg-transparent pl-3 text-foreground outline-none placeholder:text-muted-foreground",
+          sheet ? "pt-3 text-base leading-6" : "pt-2.5 text-sm leading-5",
+          touch ? "pr-10" : "pr-8",
+          recording ? (touch ? "pb-14" : "pb-12") : sheet ? "pb-3" : "pb-2.5",
         )}
         onValueChange={setBody}
         onVoiceInputActiveChange={setRecording}
