@@ -2,6 +2,12 @@
 
 Comment on exact passages of an agent's reply, the way Claude Desktop and ChatGPT let you: select text, choose **Add to chat**, and keep writing your message. Every comment goes to the agent with your next message, quoted next to the passage it refers to.
 
+![Comment card next to a selected passage, with bb's microphone in the field](screenshots/add-comment.png)
+
+![Highlighted passages in the reply and their comment pills in the composer](screenshots/staged-comments.png)
+
+![On a phone the comment opens as a sheet above the keyboard](screenshots/mobile.png)
+
 ## Install
 
 ```sh
