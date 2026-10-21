@@ -1,6 +1,6 @@
 {
   "name": "bb-plugin-inline-comments",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Comment on passages of agent replies and send them with your next message.",
   "license": "WTFPL",
   "author": {
