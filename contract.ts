@@ -1,8 +1,7 @@
 import { defineRpcContract } from "@get-bb/plugin-sdk";
 import { z } from "zod";
 
-/** Mention provider id; every comment travels as one of its pills. */
-export const MENTION_PROVIDER = "comment";
+export { MENTION_PROVIDER } from "./lib/mention-provider";
 
 const commentId = z.string().regex(/^[\w-]{1,100}$/);
 

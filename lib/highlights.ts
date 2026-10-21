@@ -1,4 +1,4 @@
-import { MENTION_PROVIDER } from "../contract";
+import { MENTION_PROVIDER } from "./mention-provider";
 
 // Paints attached comments onto assistant text with the CSS Custom Highlight
 // API and makes them clickable. Highlights are not elements, so clicks and
