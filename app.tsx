@@ -7,6 +7,7 @@ import { CommentOverlay } from "./components/CommentOverlay";
 import { editorStore } from "./lib/editor-store";
 import { captureSelection, highlights } from "./lib/highlights";
 import { NATIVE_LABEL, mountNativeAddToChatHider } from "./lib/native-add-to-chat";
+import { mountTouchMenuDock } from "./lib/touch-menu-dock";
 
 const MAX_QUOTE = 20000;
 
@@ -18,6 +19,10 @@ export default definePluginApp((app) => {
   app.contentScripts.register({
     id: "replace-native-add-to-chat",
     mount: () => mountNativeAddToChatHider(),
+  });
+  app.contentScripts.register({
+    id: "touch-menu-dock",
+    mount: () => mountTouchMenuDock(),
   });
 
   app.slots.experimental_appOverlay({ id: "comment-card", component: CommentOverlay });
