@@ -8,6 +8,7 @@ import {
 } from "@get-bb/plugin-sdk/app";
 import { toast } from "sonner";
 import type { Comment, rpcContract } from "../contract";
+import { newCommentId } from "../lib/comment-id";
 import { editorStore, type EditorRequest } from "../lib/editor-store";
 import { highlights } from "../lib/highlights";
 import { attachComment, attachedCommentIds, detachComment } from "../lib/mentions";
@@ -120,7 +121,7 @@ function CreateCard({ request }: { request: Extract<EditorRequest, { mode: "crea
       busy={busy}
       onCancel={() => editorStore.close()}
       onSubmit={(body) => {
-        const id = crypto.randomUUID();
+        const id = newCommentId();
         setBusy(true);
         rpc
           .call("comment_save", {
