@@ -6,7 +6,7 @@ Comment on exact passages of an agent's reply, the way Claude Desktop and ChatGP
 
 ![Highlighted passages in the reply and their comment pills in the composer](screenshots/staged-comments.png)
 
-![On a phone the comment opens as a sheet above the keyboard](screenshots/mobile.png)
+![On a phone Add to chat sits above the composer, clear of the system menu, and the comment opens as a sheet above the keyboard](screenshots/mobile.png)
 
 ## Install
 
